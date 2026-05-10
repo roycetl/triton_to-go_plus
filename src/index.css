@@ -1,0 +1,67 @@
+:root {
+  --bg-color:      #1B2D3E;
+  --bg-secondary:  #355872;
+  --bg-tertiary:   #4A6E8A;
+  --text-primary:  #F7F8F0;
+  --text-secondary:#7AAACE;
+  --accent-color:  #9CD5FF;
+  --card-bg:       #355872;
+  --nav-bg:        #F7F8F0;
+  --glass-bg:      rgba(27, 45, 62, 0.75);
+  --glass-border:  rgba(156, 213, 255, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #0D1E28;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Mobile-first constraints */
+#root {
+  width: 393px;
+  height: 852px;
+  max-height: 100vh;
+  position: relative;
+  background-color: var(--bg-color);
+  box-shadow: 0 0 60px rgba(156, 213, 255, 0.12);
+  overflow: hidden;
+  border-radius: 40px;
+  border: 8px solid #1B2D3E;
+}
+
+/* Hide scrollbars to look like native iOS */
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Utility Classes */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+/* Scrollbar hiding */
+::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,76 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  width: 240px; /* Default width */
+}
+
+.card:active {
+  transform: scale(0.98);
+}
+
+.card-image-container {
+  width: 100%;
+  aspect-ratio: 1; /* Square by default as seen in mockup */
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: var(--bg-secondary);
+  position: relative;
+}
+
+/* Event cards might have a different aspect ratio if we want, but sticking to mockup */
+.event-card .card-image-container {
+  aspect-ratio: 1.5; /* Slightly wider */
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.card-market .card-image {
+  object-fit: contain;
+  background-color: #121212;
+}
+
+.card:hover .card-image {
+  transform: scale(1.05);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-subtitle {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-hours {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

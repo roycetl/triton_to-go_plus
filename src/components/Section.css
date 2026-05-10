@@ -1,0 +1,56 @@
+.content-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Matching the main padding */
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  color: var(--text-primary);
+}
+
+.section-action {
+  background: var(--text-primary);
+  color: var(--bg-color);
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.section-action svg {
+  width: 18px;
+  height: 18px;
+}
+
+.section-scroll {
+  width: calc(100% + 32px);
+  margin-left: -16px; /* Break out of parent padding */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.section-scroll-inner {
+  display: flex;
+  gap: 16px;
+  padding: 0 16px; /* Restore padding inside scroll */
+  width: max-content;
+}
+
+.scroll-spacer {
+  width: 1px; /* Ensure space at the end of the scroll */
+}

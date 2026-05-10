@@ -1,0 +1,123 @@
+.map-page-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.leaflet-map {
+  width: 100%;
+  height: 100%;
+  background-color: #F7F8F0;
+}
+
+/* Custom Marker Bubble */
+.custom-map-bubble {
+  background: transparent;
+  border: none;
+}
+
+.bubble-content {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 8px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4), 0 0 0 2px rgba(255,255,255,0.2);
+  width: 100%;
+  text-align: center;
+  animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  transform-origin: bottom center;
+}
+
+.wait-number {
+  color: #121212;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.wait-text {
+  color: #666;
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.bubble-pointer {
+  width: 0; 
+  height: 0; 
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid rgba(255, 255, 255, 0.95);
+  margin: 0 auto;
+  filter: drop-shadow(0 4px 4px rgba(0,0,0,0.2));
+  animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  transform-origin: top center;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.leaflet-control-attribution {
+  display: none !important;
+}
+
+.leaflet-control-zoom {
+  border: none !important;
+  margin-top: 100px !important; /* Push it down below the TopBar if visible */
+  margin-left: 16px !important;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4) !important;
+}
+
+.leaflet-control-zoom {
+  background-color: #FFFFFF !important;
+  border: none !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  margin-top: 100px !important;
+  margin-left: 16px !important;
+  width: 32px !important;
+  height: 64px !important;
+}
+
+.leaflet-control-zoom a {
+  background: transparent !important;
+  color: #000000 !important;
+  flex: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: none !important;
+  margin: 0 !important;
+  font-size: 16px !important;
+  line-height: 1 !important;
+}
+
+.leaflet-control-zoom a:not(:last-child) {
+  border-right: none !important;
+  border-bottom: 1px solid #CCCCCC !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background-color: #F2F2F7 !important;
+}
