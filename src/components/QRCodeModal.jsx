@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { X, QrCode } from 'lucide-react';
 import './QRCodeModal.css';
 
-const QRCodeModal = ({ onClose }) => {
+const QRCodeModal = ({ onClose, currentLocation = "Sixth Marketplace" }) => {
   const [paymentMethod, setPaymentMethod] = useState('dining'); // 'dining' or 'triton'
   const [isAnimatingIn, setIsAnimatingIn] = useState(false);
 
@@ -24,7 +24,7 @@ const QRCodeModal = ({ onClose }) => {
         <header className="qr-modal-header">
           <h2>Scan to Pay</h2>
           <button className="icon-btn close-btn" onClick={handleClose}>
-            <X size={24} />
+            <X size={24} color="#121212" />
           </button>
         </header>
 
@@ -33,7 +33,7 @@ const QRCodeModal = ({ onClose }) => {
             <img src="/images/real_qr.png" alt="Your QR Code" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             <div className="qr-scan-line"></div>
           </div>
-          <p className="qr-instruction">Use this code at the market entrances</p>
+          <p className="qr-instruction">Current Location: {currentLocation}</p>
         </div>
 
         <div className="payment-selection">

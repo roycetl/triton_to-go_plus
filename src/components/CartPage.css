@@ -160,15 +160,7 @@
   color: var(--text-primary);
 }
 
-.section-title {
-  font-size: 13px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--text-secondary);
-  padding-left: 8px;
-  margin-bottom: -16px;
-}
+
 
 .payment-selection {
   margin-top: 16px;

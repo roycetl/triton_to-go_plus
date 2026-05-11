@@ -135,7 +135,7 @@ function App() {
         <BottomNav activeTab={currentView} onTabChange={setCurrentView} onQRPress={() => setIsQROpen(true)} />
       )}
 
-      {isQROpen && <QRCodeModal onClose={() => setIsQROpen(false)} />}
+      {isQROpen && <QRCodeModal onClose={() => setIsQROpen(false)} currentLocation={selectedMarket?.title || "Sixth Marketplace"} />}
       {isNotifOpen && <NotificationPanel onClose={() => setIsNotifOpen(false)} />}
       {isBusynessOpen && <BusynessPage onClose={() => setIsBusynessOpen(false)} />}
       {isSearchOpen && (
